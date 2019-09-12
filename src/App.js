@@ -21,6 +21,7 @@ function App() {
   const yyyy = today.getFullYear();
   const dateToday = yyyy + '-' + mm + '-' + dd;
   const [photoDate, setPhotoDate] = useState(dateToday);
+  const [error, setError] = useState();
 
   useEffect(() => {
     axios.get(testMode ? testPhotoApi : livePhotoApi + '&date=' + photoDate)
@@ -28,13 +29,11 @@ function App() {
         setPhotoData(response.data);
       })
       .catch(error => {
-        console.log(error);
+        setError(error);
       })
   }, [testMode, photoDate]);
 
-  if (!photoData) {
-    return null;
-  } else {
+  if (photoData) {
     return (
       <div className="App">
         <Header />
@@ -43,6 +42,18 @@ function App() {
         <Copyright copyrightOwner={photoData.copyright}/>
         <Description descriptionText={photoData.explanation} />
         <DateSelector photoDate={photoDate} setPhotoDate={setPhotoDate} dateToday={dateToday} />
+      </div>
+    );
+  } else if (error) {
+    return (
+      <div className="App">
+        <h1>{error.message}</h1>
+      </div>
+    );
+  } else {
+    return (
+      <div className="App">
+        <div className="loader">Loading...</div>
       </div>
     );
   }
