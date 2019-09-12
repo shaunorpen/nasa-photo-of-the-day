@@ -12,7 +12,7 @@ function App() {
 
   const testPhotoApi = 'https://lambda-github-api-server.herokuapp.com/';
   const livePhotoApi = 'https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY';
-  const testMode = true;
+  const testMode = false;
   const [photoData, setPhotoData] = useState();
 
   const today = new Date();
@@ -39,7 +39,7 @@ function App() {
       <div className="App">
         <Header />
         <Title titleText={photoData.title} photoDate={photoData.date} />
-        <Photo url={photoData.url} />
+        <Photo url={photoData.url} mediaType={photoData.media_type} />
         <Copyright copyrightOwner={photoData.copyright}/>
         <Description descriptionText={photoData.explanation} />
         <DateSelector photoDate={photoDate} setPhotoDate={setPhotoDate} dateToday={dateToday} />
