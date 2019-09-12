@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from 'axios';
-import Header from './Header';
-import Title from './Title';
-import Photo from './Photo';
-import Copyright from './Copyright';
-import Description from './Description';
-import DateSelector from './DateSelector';
+import Header from './components/Header';
+import Title from './components/Title';
+import Photo from './components/Photo';
+import Copyright from './components/Copyright';
+import Description from './components/Description';
+import DateSelector from './components/DateSelector';
 
 function App() {
 
   const testPhotoApi = 'https://lambda-github-api-server.herokuapp.com/';
   const livePhotoApi = 'https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY';
-  const testMode = false;
+  const testMode = true;
   const [photoData, setPhotoData] = useState();
 
   const today = new Date();
