@@ -47,8 +47,6 @@ function App() {
       margin: 1rem 0;
     }
     
-    
-    
     .loader {
       margin: 100px auto;
       font-size: 25px;
