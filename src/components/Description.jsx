@@ -1,14 +1,14 @@
 import React from 'react';
-import StComp from 'styled-components';
+// import StComp from 'styled-components';
 
-const StyledDescription = StComp.p`
-    text-align: left;
-    margin-bottom: 2rem;
-`;
+// const StyledDescription = StComp.p`
+//     text-align: left;
+//     margin-bottom: 2rem;
+// `;
 
 function Description (props) {
     return (
-        <StyledDescription>{props.descriptionText}</StyledDescription>
+        <p class="text-sm text-left text-gray-900">{props.descriptionText}</p>
     );
 }
 

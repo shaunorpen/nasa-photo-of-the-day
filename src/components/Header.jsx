@@ -1,14 +1,14 @@
 import React from 'react';
-import StComp from 'styled-components';
+// import StComp from 'styled-components';
 
-const StyledH1 = StComp.h1`
-    font-size: 5rem;
-    margin-bottom: 1rem;
-`;
+// const StyledH1 = StComp.h1`
+//     font-size: 5rem;
+//     margin-bottom: 1rem;
+// `;
 
 function Header (props) {
     return (
-        <StyledH1>Astronomy Photo of the Day</StyledH1>
+        <h1 className="text-gray-400 text-5xl">Astronomy Photo of the Day</h1>
     );
 }
 

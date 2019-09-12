@@ -2,7 +2,7 @@ import React from 'react';
 
 function Copyright (props) {
     return (
-        <p>(c) {props.copyrightOwner}</p>
+        <p className="text-base m-3 text-center text-gray-500">(c) {props.copyrightOwner}</p>
     );
 }
 

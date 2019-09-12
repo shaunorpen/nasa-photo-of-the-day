@@ -41,16 +41,15 @@ function App() {
     background: grey;
     padding: 50px;
     
-    h1 {
-      font-size: 5rem;
-    }
+    // h1 {
+    //   font-size: 5rem;
+    // }
     
-    p {
-      font-size: 1.5rem;
-      line-height: 2rem;
-      margin: 1rem 0;
-    }
-    
+    // p {
+    //   font-size: 1.5rem;
+    //   line-height: 2rem;
+    //   margin: 1rem 0;
+    // }
   `;
 
   if (photoData) {
