@@ -9,6 +9,7 @@ function DateSelector (props) {
                 type="date" 
                 defaultValue={props.photoDate} 
                 max={props.dateToday}
+                min="1995-06-16"
                 onChange={() => props.setPhotoDate(document.querySelector('input').value)}
                  />
         </div>
