@@ -40,20 +40,6 @@ function App() {
     margin: 20px auto;
     background: white;
     padding: 50px;
-
-    h1 {
-      font-size: 5rem;
-      margin-bottom: 1rem;
-    }
-    
-    h2 {
-      font-size: 3.5rem;
-      margin-bottom: 1rem;
-    }
-    
-    img {
-      width: 100%;
-    }
     
     p {
       font-size: 1.5rem;
@@ -61,24 +47,7 @@ function App() {
       margin: 1rem 0;
     }
     
-    .alignLeft {
-      text-align: left;
-      margin-bottom: 2rem;
-    }
     
-    .date-selector {
-      border: 1px solid grey;
-      padding: 1rem;
-    }
-    
-    .date-selector h3 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    
-    .date-selector input {
-      font-size: 2rem;
-    }
     
     .loader {
       margin: 100px auto;
